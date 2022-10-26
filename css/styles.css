@@ -1,0 +1,590 @@
+/* ----------- RESET STYLES ----------*/
+
+/* .visually-hidden - приховує невидимий контент */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ---------- GENERAL STYLES ----------*/
+:root {
+  --first-title-color: #ffffff;
+  --header-contacts-color: #757575;
+  --btn-color: #ffffff;
+  --accent-background: #2196f3;
+  --text-color: #757575;
+  --footer-logo-color: #ffffff;
+  --prt-btn-color: #212121;
+  --accent-color: #2196f3;
+  --prt-cases-gap: 30px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  /* font-size: 14px; */
+  color: #212121;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  max-width: 1200px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* ---------- HEADER ----------*/
+
+.header-list {
+  display: flex;
+  margin-left: 95px;
+}
+
+/* .header-list .item:not(:last-child) {
+  margin-right: 52px;
+/* }
+
+/* нижче oldschool variant */
+.header-list .item + .item {
+  margin-left: 52px;
+}
+
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contacts .item + .item {
+  margin-left: 30px;
+}
+
+.header-contacts > .item {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-weight: 500;
+}
+.header-contacts a {
+  display: flex;
+  align-items: center;
+}
+
+.header-contacts .icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+
+  height: 80px;
+}
+
+.header-link:hover,
+.header-tel:hover,
+.header-mailto:hover,
+.header-link:focus,
+.header-tel:focus,
+.header-mailto:focus,
+.header-link.current {
+  outline: none;
+  color: var(--accent-color);
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.logo span {
+  color: #2196f3;
+}
+
+.header-tel,
+.header-mailto {
+  color: #757575;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.header-link {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  color: #212121;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+/* ---------- HERO ----------*/
+.hero {
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin: 0 auto;
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+  /* background-color: #c4c4c4; */
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  max-width: 1600px;
+  height: 600px;
+}
+
+.hero-title {
+  margin-bottom: 45px;
+  padding-left: 280px;
+  padding-right: 280px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--first-title-color);
+}
+
+.hero-btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border: none;
+
+  background: var(--accent-background);
+  color: var(--btn-color);
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* ----------OUR ADVANTAGES-----*/
+.advantages {
+  padding-top: 94px;
+}
+.advantages-list {
+  display: flex;
+}
+
+.advantages-list .item + .item {
+  margin-left: 30px;
+}
+.advantages-list .item {
+  flex-basis: calc((100%-30px) / 3);
+}
+
+.advantages-list .icon-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  background-color: #f5f4fa;
+
+  /* width: 270px; */
+  height: 120px;
+  border-radius: 4px;
+}
+
+.advantages-title {
+  margin-bottom: 20px;
+
+  color: #212121;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.advantages-text {
+  margin-bottom: 0;
+
+  color: var(--text-color);
+
+  /* font-weight: 400; 400 це є за замовченням - не вказують в css*/
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+/* ----------WHAT WE DO----------*/
+
+.whatwedo-title {
+  text-align: center;
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+
+.whatwedo-list {
+  display: flex;
+}
+
+.whatwedo-list .item + .item {
+  margin-left: 30px;
+}
+
+/* ---------- TEAM ----------*/
+
+.team {
+  background: #f5f4fa;
+}
+
+.team-title {
+  margin-bottom: 30px;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-list .item {
+  width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-list > .item + .item {
+  margin-left: 30px;
+}
+
+.team-list .card-footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.team-list .third-title {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}
+
+.team-list .text {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+.team-list .card-img {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.card-footer .social-list {
+  display: flex;
+  justify-content: center;
+
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.social-item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  fill: #afb1b8;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.social-link:hover,
+.social-link:focus {
+  fill: #fff;
+  outline: none;
+  background-color: var(--accent-background);
+}
+
+/*---------- CLIENTS ----------*/
+.clients .second-title {
+  margin-bottom: 50px;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  letter-spacing: 0.03em;
+}
+.list-clients {
+  display: flex;
+}
+.list-clients .item {
+  flex-basis: calc((100%-30px) / 6);
+}
+.list-clients .item:not(:first-child) {
+  margin-left: 30px;
+}
+.list-clients .link-client {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 170px; */
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.list-clients .link-client:hover,
+.list-clients .link-client:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  outline: currentColor;
+}
+
+.list-clients .link-client {
+  fill: #afb1b8;
+}
+
+/* ---------- FOOTER ----------*/
+.footer {
+  background: #2f303a;
+}
+
+.footer .logo {
+  color: #ffffff;
+}
+
+.address-map {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--footer-logo-color);
+}
+
+.address-tel,
+.address-mailto {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ftr-contacts {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: 0;
+}
+.ftr-contacts .address {
+  margin-top: 20px;
+}
+
+.address-map:hover,
+.address-tel:hover,
+.address-mailto:hover,
+.address-map:focus,
+.address-tel:focus,
+.address-mailto:focus {
+  color: var(--accent-color);
+}
+.address-list .item + .item {
+  margin-top: 9px;
+}
+
+.footer > .container {
+  display: flex;
+}
+
+.ftr-socialnet {
+  margin-left: 70px;
+}
+.ftr-socialnet .second-title {
+  padding-top: 72px;
+  margin-bottom: 20px;
+
+  color: #ffffff;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(14 / 16);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.ftr-socialnet > ul {
+  display: flex;
+  justify-content: center;
+}
+
+.ftr-socialnet .social-icon {
+  fill: #fff;
+}
+
+.ftr-socialnet .social-link {
+  background: rgba(255, 255, 255, 0.1);
+}
+.ftr-socialnet .social-link:hover,
+.ftr-socialnet .social-link:focus {
+  background: var(--accent-background);
+}
+
+/* ---------- P--O--R--T--F--O--L--I--O ----------*/
+/*---------- CASES ----------*/
+.prt-list-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.prt-list-btn .item + .item {
+  margin-left: 8px;
+}
+.prt-btn {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  color: var(--prt-btn-color);
+  background: #f5f4fa;
+  border-radius: 4px;
+  border: none;
+}
+
+.prt-btn:hover,
+.prt-btn:focus {
+  outline: none;
+  background-color: var(--accent-background);
+  color: var(--btn-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.prt-cases {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.prt-link-case:hover,
+.prt-link-case:focus {
+  background: #ffffff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.prt-link-case {
+  display: block;
+  outline: none;
+}
+
+.prt-cases .second-title {
+  margin-bottom: 4px;
+
+  color: #212121;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.prt-cases .text {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+.prt-cases .card-footer {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+/* ----------FOOTER ----- */
